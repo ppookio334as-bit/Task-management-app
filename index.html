@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجاز - تطبيق إدارة المهام</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .main-section {
+            text-align: right;
+            color: white;
+        }
+
+        .main-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .start-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .start-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .goals-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .goals-title {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .goals-list {
+            list-style: none;
+        }
+
+        .goals-list li {
+            color: white;
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+            padding-right: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .goals-list li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #f5576c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .credits {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: right;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .main-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .goals-section {
+                padding: 25px;
+            }
+        }
+
+        .decoration {
+            position: fixed;
+            opacity: 0.1;
+            z-index: -1;
+            color: white;
+            font-size: 200px;
+            pointer-events: none;
+        }
+
+        .deco1 {
+            top: -50px;
+            left: 50px;
+        }
+
+        .deco2 {
+            bottom: 100px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="decoration deco1">⚡</div>
+    <div class="decoration deco2">🎯</div>
+
+    <div class="container">
+        <div class="main-section">
+            <h1>إنجاز أسرع<br>بثقة وتركيز</h1>
+            <p class="subtitle">نظّم مهامك اليومية وأنجزها بكفاءة عالية مع تطبيقك الذكي</p>
+            <button class="start-btn" onclick="goToStep1()">ابدأ الآن</button>
+        </div>
+
+        <div class="goals-section">
+            <div class="goals-title">أهدافنا:</div>
+            <ul class="goals-list">
+                <li>مساعدة الطلاب على تنظيم وقتهم</li>
+                <li>تقليل التوتر الناتج عن تراكم الأعمال</li>
+                <li>زيادة الإنتاجية والفعالية</li>
+                <li>تعزيز الشعور بالإنجاز والنجاح</li>
+            </ul>
+            <div class="credits">
+                <strong>المجموعة 3</strong><br>
+                إشراف: أ. سناء القبساني
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToStep1() {
+            window.location.href = 'step1.html';
+        }
+    </script>
+</body>
+</html>
